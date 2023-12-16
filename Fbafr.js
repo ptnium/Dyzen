@@ -12,7 +12,7 @@ Facebook = {
     },
     inspect: function (data, config) {
         console.info("INFO: script initialized on the page data...");
-        console.debug("DEBUG: finding confirm buttons...");
+        console.debug("DEBUG: finding Add friend buttons...");
         var confirmDivEles = document.querySelectorAll('[aria-label="Confirm"]');
         data = [];
 
@@ -22,7 +22,7 @@ Facebook = {
             }
         }
         var totalRows = data.length; 
-        console.debug("DEBUG: total confirm buttons found on page are " + totalRows);
+        console.debug("DEBUG: total Add friend buttons found on page are " + totalRows);
         if (totalRows > 0) {
             this.confirm(data, config);
         } else {
